@@ -2,13 +2,13 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    site: `Gnonce-starter`,
-    title: `Gatsby Starter Gnonce`,
-    titleTemplate: `%s - Gnonce`,
-    description: `Gatsby + Typescript + Styled Components = 💖`,
+    site: `Lucky Gatsby Starter`,
+    title: `Lucky Gatsby Starter`,
+    titleTemplate: `%s - Lucky Gatsby Starter`,
+    description: `Lucky Gatsby Starter with 💖`,
     siteUrl: `https://gatsby-starter-gnonce.netlify.com/`,
     language: `en`,
-    color: `#003580`,
+    color: `#800000`,
     twitter: "gnonce"
   },
   plugins: [
