@@ -1,21 +1,21 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import React from "react";
+import {Helmet} from "react-helmet";
+import {graphql, StaticQuery} from "gatsby";
 
 interface IHeadProps {
-  title?: string
-  description?: string
-  thumbnail?: string
-  article?: boolean
-  pathname: string
+  title?: string;
+  description?: string;
+  thumbnail?: string;
+  article?: boolean;
+  pathname: string;
 }
 
-export default ({
+export const Head = ({
   title,
   description,
   thumbnail,
   pathname,
-  article,
+  article
 }: IHeadProps) => (
   <StaticQuery
     query={QueryHead}
@@ -29,17 +29,17 @@ export default ({
           language,
           siteUrl,
           color,
-          twitter,
-        },
-      },
+          twitter
+        }
+      }
     }) => {
       const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
         image: thumbnail || `${siteUrl}/assets/thumbnail.png`,
         url: `${siteUrl}${pathname}`,
-        twitter,
-      }
+        twitter
+      };
       return (
         <Helmet title={seo.title} titleTemplate={titleTemplate}>
           <html lang={language} />
@@ -70,10 +70,10 @@ export default ({
           <meta name="twitter:image" content={seo.image} />
           <meta name="twitter:url" content={seo.url} />
         </Helmet>
-      )
+      );
     }}
   />
-)
+);
 
 const QueryHead = graphql`
   query QueryHead {
@@ -90,4 +90,4 @@ const QueryHead = graphql`
       }
     }
   }
-`
+`;
