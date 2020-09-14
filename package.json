@@ -1,23 +1,34 @@
 {
-  "name": "gnonce-gatsby",
+  "name": "lucky-gatsby-starter",
   "version": "1.0.1",
   "private": true,
-  "description": "Gatsby Starter Gnonce",
+  "description": "Re-implementation of the react template lucky-react-starter using Gatsby.js",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{ts,tsx}",
-    "lint": "tslint 'src/**/*.{ts,tsx}'",
+    "lint": "eslint --cache 'src/**/*.{ts,tsx,jsx}' && stylelint '**/**.tsx' && tsc && ts-unused-exports tsconfig.json",
     "serve": "gatsby serve",
     "start": "npm run develop",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "npm run lint"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "browserslist": {
+    "production": [
+      "edge >= 12",
+      "ff >= 60",
+      "chrome >= 44",
+      "safari >= 10"
+    ],
+    "development": [
+      "edge >= 12",
+      "ff >= 60",
+      "chrome >= 44",
+      "safari >= 10"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "dependencies": {
     "axelra-styled-bootstrap-grid": "^0.1.1",
     "lodash": "^4.17.20",
