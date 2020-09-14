@@ -9,7 +9,8 @@ import {
   Spacer
 } from "axelra-styled-bootstrap-grid";
 import {getAlphaColor} from "../../../helpers/get-alpha-color";
-import {__GRAY_SCALE} from "../../../UI/theme/Theme";
+
+import {__GRAY_SCALE} from "../../../layout/theme";
 import {
   SectionBox,
   SectionLayout,
