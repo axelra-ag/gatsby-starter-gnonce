@@ -20,9 +20,6 @@ export enum __COLORS {
   WHITE = "#fff"
 }
 
-export const GUTTER = 15;
-export const SPACING = 8;
-
 export enum __GRAY_SCALE {
   _WHITE = "#fff",
   _100 = "#f6f9fc",
