@@ -2,6 +2,7 @@ import * as React from "react";
 import {graphql} from "gatsby";
 import styled from "styled-components";
 import {Layout} from "../layout";
+import useAppState from "../hooks/use-app-state";
 
 type IndexPageProps = {
   location: {
@@ -33,7 +34,9 @@ const Wrapper = styled.div`
 `;
 
 export default ({data, location}: IndexPageProps) => {
-  const {image, site} = data;
+  // const {image, site} = data;
+  const a = useAppState(st => st.todos);
+  console.log(data);
   return (
     <Layout location={location}>
       <Wrapper>asfjoasjofajosfjoasf</Wrapper>
