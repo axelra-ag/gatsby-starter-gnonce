@@ -1,8 +1,7 @@
 import * as React from "react";
 import {graphql} from "gatsby";
-import styled from "styled-components";
 import {Layout} from "../layout";
-import useAppState from "../hooks/use-app-state";
+import {Documentation} from "../components/docs/Documentation";
 
 type IndexPageProps = {
   location: {
@@ -23,23 +22,11 @@ type IndexPageProps = {
   };
 };
 
-const Wrapper = styled.div`
-  width: 100%;
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #003580;
-`;
-
 export default ({data, location}: IndexPageProps) => {
   // const {image, site} = data;
-  const a = useAppState(st => st.todos);
-  console.log(data);
   return (
     <Layout location={location}>
-      <Wrapper>asfjoasjofajosfjoasf</Wrapper>
+      <Documentation />
     </Layout>
   );
 };
