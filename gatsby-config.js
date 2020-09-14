@@ -6,10 +6,10 @@ module.exports = {
     title: `Lucky Gatsby Starter`,
     titleTemplate: `%s - Lucky Gatsby Starter`,
     description: `Lucky Gatsby Starter with 💖`,
-    siteUrl: `https://gatsby-starter-gnonce.netlify.com/`,
+    siteUrl: `https://axelra.com/`,
     language: `en`,
     color: `#800000`,
-    twitter: "gnonce"
+    twitter: "Axelra_AG"
   },
   plugins: [
     {
