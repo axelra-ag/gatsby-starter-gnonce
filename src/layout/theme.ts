@@ -46,7 +46,6 @@ export enum __ALERTS {
 export const GlobalStyle = createGlobalStyle<{
   theme: ThemeProviderProps<any>;
 }>`
-  @import url(${MainTheme.googleUrl});
   *, ::after, ::before {
     box-sizing: border-box;
   }

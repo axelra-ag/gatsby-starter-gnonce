@@ -1,6 +1,7 @@
 import React from "react";
 import {Helmet} from "react-helmet";
 import {graphql, StaticQuery} from "gatsby";
+import {MainTheme} from "../layout/theme";
 
 interface IHeadProps {
   title?: string;
@@ -40,16 +41,16 @@ export const Head = ({
         url: `${siteUrl}${pathname}`,
         twitter
       };
+      const link = MainTheme.googleUrl;
       return (
         <Helmet title={seo.title} titleTemplate={titleTemplate}>
           <html lang={language} />
-
           <meta name="description" content={seo.description} />
           <meta name="image" content={seo.image} />
           <meta name="theme-color" content={color} />
           <meta name="application-name" content={site} />
           <link rel="canonical" href={seo.url} />
-
+          <link href={link} rel="stylesheet" />
           <meta property="og:url" content={seo.url} />
           <meta property="og:title" content={seo.title} />
           <meta property="og:description" content={seo.description} />
