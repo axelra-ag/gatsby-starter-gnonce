@@ -23,7 +23,8 @@ interface IndexPageProps {
 }
 
 export default ({data, location}: IndexPageProps) => {
-  // const {image, site} = data;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const {image, site} = data;
   return (
     <Layout location={location}>
       <H1>Page not found!</H1>

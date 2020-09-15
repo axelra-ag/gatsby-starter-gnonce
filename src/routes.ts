@@ -1,4 +1,5 @@
 // In your routes configuration file
+// @ts-ignore
 const path = require("path");
 
 module.exports = [
